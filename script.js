@@ -5,15 +5,9 @@ document.getElementById("btn").addEventListener("click", async function() {
     const outputDiv = document.getElementById("output");
 
     if (!text || isNaN(delay) || delay < 0) {
-        outputDiv.textContent = "Please enter valid text and a non-negative delay.";
         return;
     }
-
-    outputDiv.textContent = "Waiting...";
-
-
     await delayMessage(delay);
-
     outputDiv.textContent = text;
 });
 
